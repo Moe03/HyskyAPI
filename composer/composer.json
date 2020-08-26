@@ -1,0 +1,5 @@
+{
+    "require": {
+        "rickselby/nbt": "~4.0"
+    }
+}

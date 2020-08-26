@@ -1,0 +1,121 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4375883f5df3bc4091dde0b8f474e931",
+    "packages": [
+        {
+            "name": "nicmart/tree",
+            "version": "v0.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nicmart/Tree.git",
+                "reference": "0616b54bb49938e1a816141d7943db48ebf76938"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nicmart/Tree/zipball/0616b54bb49938e1a816141d7943db48ebf76938",
+                "reference": "0616b54bb49938e1a816141d7943db48ebf76938",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tree\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolò Martini",
+                    "email": "nicmartnic@gmail.com"
+                }
+            ],
+            "description": "A basic but flexible php tree data structure and a fluent tree builder implementation.",
+            "time": "2015-08-20T20:50:35+00:00"
+        },
+        {
+            "name": "rickselby/nbt",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rickselby/NBT.git",
+                "reference": "c11ec81e984429d8fc7c32d3fd8de37ff4a4142f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rickselby/NBT/zipball/c11ec81e984429d8fc7c32d3fd8de37ff4a4142f",
+                "reference": "c11ec81e984429d8fc7c32d3fd8de37ff4a4142f",
+                "shasum": ""
+            },
+            "require": {
+                "nicmart/tree": "~0.2",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nbt\\": "src/",
+                    "Nbt\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Martin",
+                    "email": "frozenfire@thefrozenfire.com",
+                    "homepage": "https://github.com/TheFrozenFire",
+                    "role": "Developer"
+                },
+                {
+                    "name": "James Lowe",
+                    "homepage": "https://github.com/jegol",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kevin Andrews",
+                    "email": "kevin@zvps.co.uk",
+                    "homepage": "https://github.com/Caffe1neAdd1ct",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Rick Selby",
+                    "email": "rick@selby-family.co.uk",
+                    "homepage": "https://github.com/rickselby",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Parser/Writer for the NBT file format",
+            "homepage": "https://github.com/rickselby/NBT",
+            "keywords": [
+                "NBT",
+                "binary",
+                "decode",
+                "encode"
+            ],
+            "time": "2015-12-16T15:40:51+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
