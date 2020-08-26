@@ -12,7 +12,7 @@ if($_GET['key'] != '2k2R5U9Ce*T4=jTZ'){
 }
 
 ini_set('memory_limit', '8192M');
-ini_set('max_execution_time', 300);
+ini_set('max_execution_time', 50000);
 require("composer/vendor/autoload.php");
 include("includes/functions.php");
 

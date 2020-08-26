@@ -2,6 +2,8 @@
 
 header("Access-Control-Allow-Origin: *");
 
+ini_set('display_errors', 0);
+
 session_start();
 
 if(isset($_GET["q"])){

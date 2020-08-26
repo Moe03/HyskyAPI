@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 
 
 // error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 // ini_set("allow_url_fopen", true);
 
     $id = $_GET["uuid"];

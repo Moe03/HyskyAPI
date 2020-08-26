@@ -2,6 +2,8 @@
 
 header("Access-Control-Allow-Origin: *");
 
+ini_set('display_errors', 0);
+
 $query = " " . $query;
 
     if(strpos($query, "aote") || strpos($query, "aoet")){
