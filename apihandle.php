@@ -25,7 +25,7 @@ if(isset($_GET["req"])){
         if(isset($_GET["query"])){
             $q = $_GET["query"];
             $q = strtoupper(str_replace(" ", "_", trim($q)));
-            $item = json_decode(file_get_contents("https://api.hypixel.net/skyblock/bazaar/product?key=09828659-42c5-4360-9203-d93bcb5df79d&productId=" . $q), true);
+            $item = json_decode(file_get_contents("https://api.hypixel.net/skyblock/bazaar/product?key=YOUR KEY&productId=" . $q), true);
             if($item){
                 echo json_encode($item);
             }
@@ -54,13 +54,13 @@ if(isset($_GET["req"])){
                 $playerAuctions = array();
                 $playerName = strtolower(trim(str_replace("/ah", "", $query)));
                 $playerName = str_replace("-h", "", $playerName);
-                $player = json_decode(file_get_contents("https://api.hypixel.net/player?key=09828659-42c5-4360-9203-d93bcb5df79d&name=" . $playerName), true);
+                $player = json_decode(file_get_contents("https://api.hypixel.net/player?key=YOUR KEY&name=" . $playerName), true);
                 $playerUUID = $player["player"]["uuid"];
                 $playerProfiles = $player["player"]["stats"]["SkyBlock"]["profiles"];
 
                 foreach($playerProfiles as $profile){
                     
-                    $profileAucs = json_decode(file_get_contents("https://api.hypixel.net/skyblock/auction?key=09828659-42c5-4360-9203-d93bcb5df79d&profile=" . $profile["profile_id"]), true)["auctions"];
+                    $profileAucs = json_decode(file_get_contents("https://api.hypixel.net/skyblock/auction?key=YOUR KEY&profile=" . $profile["profile_id"]), true)["auctions"];
                     
                     if(sizeOf($profileAucs)){
                         
