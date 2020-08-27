@@ -16,7 +16,7 @@ ini_set('max_execution_time', 50000);
 require("composer/vendor/autoload.php");
 include("includes/functions.php");
 
-$key = "b90c1c23-2007-48ec-b58a-e7652ee862b8";
+$key = "YOUR KEY";
 
 $link = "http://api.hypixel.net/skyblock/auctions?key=" . $key; 
 
