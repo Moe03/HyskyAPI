@@ -31,13 +31,13 @@ https://i.ibb.co/prTTTFv/example.png
 
 The Api root is https://s.hyskyapi.cc/apihandle.php
 
-### There are 2 types of request:
+### There are 2 types of requests:
 - req=top **To get top 200 auctions.**
 - req=search **to Search through Auctions and needs a query.**
 
 so for example let's say you want to search for "aspect of the end" <br>
 https://s.hyskyapi.cc/apihandle.php?req=search&query=aspectoftheend <br>
-This will return 200 AOTEs auctions sorted by ending time.
+This will return 200 AOTEs auctions sorted by ending time (This searches through all active skyblock auctions).
 <br>
 <br>
 but what if you want more?
