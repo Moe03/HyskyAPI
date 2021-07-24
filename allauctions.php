@@ -7,7 +7,7 @@ ini_set('display_errors', 0);
 if(!isset($_GET['key'])){
     exit('You are not authorized.');
 }
-if($_GET['key'] != '2k2R5U9Ce*T4=jTZ'){
+if($_GET['key'] != 'jTZ'{
     exit('You are not authorized.');
 }
 
