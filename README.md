@@ -36,13 +36,13 @@ The Api root is https://hyskyapi.000webhostapp.com/apihandle.php
 - req=search **to Search through Auctions and needs a query.**
 
 so for example let's say you want to search for "aspect of the end" <br>
-https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=aspectoftheend <br>
+https://hyskyapi.com/apihandle.php?req=search&query=aspectoftheend <br>
 This will return 200 AOTEs auctions sorted by ending time (This searches through all active skyblock auctions).
 <br>
 <br>
 but what if you want more?
 <br>
-https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=aspectoftheend&page=1
+https://hyskyapi.com/apihandle.php?req=search&query=aspectoftheend&page=1
 <br>
 This will return the next 200 AOTE auctions.
 
@@ -53,7 +53,7 @@ This will return the next 200 AOTE auctions.
 - Checkout some shortcuts to some items that you can use in the query parameter here: https://skyah.cc/smart
 - If you search by default it will sort by ending soon only, no sorting options added yet.
 - You can search for enchanted books and items using /ebs (enchants)
-  - Example: https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=/ebs%20power5&page=1
+  - Example: https://hyskyapi.com/apihandle.php?req=search&query=/ebs%20power5&page=1
 - /ebs is typically used to search for enchants, but you can also use it to search for item's lore instead of item's name in query parameter.
 
 #### If you would like to support me or have any suggestions make sure to join my [Discord](https://discord.gg/rqKmcXh).
