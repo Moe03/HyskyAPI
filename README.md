@@ -2,7 +2,7 @@
 Unofficial Hypixel API created for handling Auctions API of Skyblock gamemode with ease and efficiency.
 
 ## Facts about the API:
-- All auctions are updated every 5 minutes.
+- All auctions are updated every 2 minutes.
 - Auctions' limit per request is 200.
 - All auctions are sorted automatically to show the ending soon one's first.
 
