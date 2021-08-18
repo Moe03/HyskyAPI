@@ -5,6 +5,7 @@ Unofficial Hypixel API created for handling Auctions API of Skyblock gamemode wi
 - All auctions are updated every 2 minutes.
 - Auctions' limit per request is 200.
 - All auctions are sorted automatically to show the ending soon one's first.
+- If you want you can sort auctions by other variables (like cheapest first) using 'sortby' attribute --> Example: https://hyskyapi.com/apihandle.php?req=search&query=aote&sortyby=cheapest
 
 ## An auction example:
 
