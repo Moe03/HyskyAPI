@@ -29,7 +29,7 @@ https://i.ibb.co/prTTTFv/example.png
 
 ## API's root:
 
-The Api root is https://hyskyapi.000webhostapp.com/apihandle.php
+The Api root is https://hyskyapi.com/apihandle.php
 
 ### There are 2 types of requests:
 - req=top **To get top 200 auctions.**
