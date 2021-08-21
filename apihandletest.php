@@ -1,19 +1,12 @@
 <?php
-
-header("Access-Control-Allow-Origin: *");
+ header("Access-Control-Allow-Origin: *");
 ini_set('memory_limit', '8192M');
-
 ini_set('display_errors', 0);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require("composer/vendor/autoload.php");
 
-
-    $access = true;
-
-
-
-if(isset($_GET["req"]) && $access){
+if(isset($_GET["req"])){
     if($_GET["req"] == "top"){
 
         $AuctionsArray = json_decode(file_get_contents("cache/allauctions.json"), true);
@@ -27,15 +20,54 @@ if(isset($_GET["req"]) && $access){
         }
         
     }
+
+    elseif($_GET["req"] == "bazaar"){
+        if(isset($_GET["query"])){
+            $q = $_GET["query"];
+            $q = strtoupper(str_replace(" ", "_", trim($q)));
+            $item = json_decode(file_get_contents("https://api.hypixel.net/skyblock/bazaar/product?key=fe785d31-4c20-4fd9-920a-1efd35ffbe71&productId=" . $q), true);
+            if($item){
+                echo json_encode($item);
+            }
+            else{
+                echo json_encode(false);
+            }
+        }
+    }
     
     elseif($_GET["req"] == "search"){
     
         if(isset($_GET["query"])){
+            
 
             $query = strtolower($_GET["query"]);
 
-            if(!strpos(" " . $query, "/ah ") && !strpos(" " . $query, "/ebs ")){
+            if(!strpos(" " . $query, "/ah ") && !strpos(" " . $query, "/ebs ") && !strpos(" " . $query, "/spy ")){
                 include("smart_search.php");
+            }
+
+            if(strpos(" " . $query, "/spy ")){
+                $playerName = trim(str_replace("/spy", "", $query));
+                $player = json_decode(file_get_contents("https://api.mojang.com/users/profiles/minecraft/" . $playerName), true);
+                $playerUUID = $player["id"];
+                $searchAucArray = json_decode(file_get_contents("cache/allauctions.json"), true);        
+                $resultArray = array();
+                
+                    foreach($searchAucArray as $Auction){
+                        
+                        if($Auction['latest_bid']['bidder'] == $playerUUID){
+                            // PUT PLAYER UUID   
+                                array_push($resultArray, $Auction);
+                        }
+                    }
+
+                array_multisort(array_column($resultArray, 'endingtime'), SORT_ASC, $resultArray);
+                $JsonOutput = array_slice($resultArray, 0 ,200);
+                $AuctionsJson = json_encode($JsonOutput);
+                echo $AuctionsJson;
+
+                exit();
+                    
             }
 
             if(strpos(" " . $query, "/ah" )){
@@ -46,20 +78,14 @@ if(isset($_GET["req"]) && $access){
                 $playerAuctions = array();
                 $playerName = strtolower(trim(str_replace("/ah", "", $query)));
                 $playerName = str_replace("-h", "", $playerName);
-                $player = json_decode(file_get_contents("https://api.hypixel.net/player?key=09828659-42c5-4360-9203-d93bcb5df79d&name=" . $playerName), true);
+                $player = json_decode(file_get_contents("https://api.hypixel.net/player?key=fe785d31-4c20-4fd9-920a-1efd35ffbe71&name=" . $playerName), true);
                 $playerUUID = $player["player"]["uuid"];
                 $playerProfiles = $player["player"]["stats"]["SkyBlock"]["profiles"];
-                echo "___Player profiles.____";
-                var_dump($playerProfiles);
-                echo "___END___";
 
                 foreach($playerProfiles as $profile){
                     
-                    $profile = json_decode(file_get_contents("https://api.hypixel.net/skyblock/auction?key=09828659-42c5-4360-9203-d93bcb5df79d&profile=" . $profile["profile_id"]), true);
-                    $profileAucs = $profile["auctions"];
-                    echo "<br>___sec___  <br>";
-                    var_dump($profile);
-                    echo "<br>___sec___ <br>";
+                    $profileAucs = json_decode(file_get_contents("https://api.hypixel.net/skyblock/auction?key=fe785d31-4c20-4fd9-920a-1efd35ffbe71&profile=" . $profile["profile_id"]), true)["auctions"];
+                    
                     if(sizeOf($profileAucs)){
                         
                         foreach($profileAucs as $Auction){
@@ -98,27 +124,27 @@ if(isset($_GET["req"]) && $access){
 
                             $Auction["item_bytes"] = "";
                             
-                            if($Auction["end"] > strtotime("now") * 1000 || $history == true){
+                            if($Auction["end"] > strtotime("now") * 1000 || $history){
                                 array_push($playerAuctions, $Auction); 
                             }
-
+                        
                         }
                     
                     }
                 
                 }
 
-                // if(sizeof($playerAuctions)){
+                if(sizeof($playerAuctions)){
 
-                //     echo json_encode($playerAuctions);
+                    echo json_encode($playerAuctions);
 
-                // }
+                }
 
-                // else{
+                else{
 
-                //     echo json_encode("false");
+                    echo json_encode("false");
 
-                // }
+                }
             }
 
 
@@ -179,6 +205,7 @@ if(isset($_GET["req"]) && $access){
             }
 
             else{
+                echo 'ELSE STATE WORKS?';
                 $searchAucArray = json_decode(file_get_contents("cache/allauctions.json"), true);
                 $resultArray = array();
 
@@ -245,6 +272,6 @@ if(isset($_GET["req"]) && $access){
 }
 
 else{
-    echo "This API key is invalid.";
+    echo "THIS API IS UNDER CONSTRUCTION AND YOU ARE NOT ALLOWED TO USE THIS.";
 }
 ?>
