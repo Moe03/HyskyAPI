@@ -32,6 +32,8 @@ https://i.ibb.co/prTTTFv/example.png
 
 The Api root is https://3.143.149.23/
 
+NOTE: API'S LINK IS CONSTANTLY CHANGING, THIS GIT HUB IS ALWAYS UP TO DATE WITH IT.
+
 
 ### There are 2 types of requests:
 - req=top **To get top 200 auctions.**
