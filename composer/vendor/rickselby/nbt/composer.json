@@ -1,0 +1,46 @@
+{
+    "name": "rickselby/nbt",
+    "type": "library",
+    "description": "Parser/Writer for the NBT file format",
+    "keywords": ["NBT", "decode", "encode", "binary"],
+    "homepage": "https://github.com/rickselby/NBT",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Martin",
+            "email": "frozenfire@thefrozenfire.com",
+            "homepage": "https://github.com/TheFrozenFire",
+            "role": "Developer"
+        },
+        {
+            "name": "James Lowe",
+            "homepage": "https://github.com/jegol",
+            "role": "Developer"
+        },
+        {
+            "name": "Kevin Andrews",
+            "email": "kevin@zvps.co.uk",
+            "homepage": "https://github.com/Caffe1neAdd1ct",
+            "role": "Developer"
+        },
+        {
+            "name": "Rick Selby",
+            "email": "rick@selby-family.co.uk",
+            "homepage": "https://github.com/rickselby",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "nicmart/tree": "~0.2"
+    },
+    "require-dev": {
+        "mikey179/vfsStream": "^1.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nbt\\": "src/",
+            "Nbt\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <?php
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
  header("Access-Control-Allow-Origin: *");
-ini_set('memory_limit', '8192M');
+ini_set('memory_limit', '4000M');
 ini_set('display_errors', 0);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
