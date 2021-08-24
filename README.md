@@ -29,20 +29,24 @@ https://i.ibb.co/prTTTFv/example.png
 
 ## API's root:
 
-The Api root is https://s.hyskyapi.cc/apihandle.php
+The Api root is https://hyskyapi.000webhostapp.com/apihandle.php
 
 ### There are 2 types of requests:
 - req=top **To get top 200 auctions.**
 - req=search **to Search through Auctions and needs a query.**
 
 so for example let's say you want to search for "aspect of the end" <br>
-https://s.hyskyapi.cc/apihandle.php?req=search&query=aspectoftheend <br>
+https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=aspectoftheend <br>
 This will return 200 AOTEs auctions sorted by ending time (This searches through all active skyblock auctions).
 <br>
 <br>
 but what if you want more?
 <br>
-https://s.hyskyapi.cc/apihandle.php?req=search&query=aspectoftheend&page=1
+<<<<<<< HEAD
+https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=aspectoftheend&page=1
+=======
+https://3.143.149.23/apihandle.php?req=search&query=aspectoftheend&page=1
+>>>>>>> 33b359b86e53653257162b8be462ee2604da71de
 <br>
 This will return the next 200 AOTE auctions.
 
@@ -53,7 +57,11 @@ This will return the next 200 AOTE auctions.
 - Checkout some shortcuts to some items that you can use in the query parameter here: https://skyah.cc/smart
 - If you search by default it will sort by ending soon only, no sorting options added yet.
 - You can search for enchanted books and items using /ebs (enchants)
-  - Example: https://s.hyskyapi.cc/apihandle.php?req=search&query=/ebs%20power5&page=1
+<<<<<<< HEAD
+  - Example: https://hyskyapi.000webhostapp.com/apihandle.php?req=search&query=/ebs%20power5&page=1
+=======
+  - Example: https://3.143.149.23/apihandle.php?req=search&query=/ebs%20power5&page=1
+>>>>>>> 33b359b86e53653257162b8be462ee2604da71de
 - /ebs is typically used to search for enchants, but you can also use it to search for item's lore instead of item's name in query parameter.
 
 #### If you would like to support me or have any suggestions make sure to join my [Discord](https://discord.gg/rqKmcXh).
