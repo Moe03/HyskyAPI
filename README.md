@@ -4,9 +4,9 @@ Unofficial Hypixel API created for handling Auctions API of Skyblock gamemode wi
 ## IMPORTANT NOTE:
 The API's root link keeps changing, but the main one right now is:
 - https://api.mystichat.xyz/
+
 Secondary link:
 - https://hyskyapi.000webhostapp.com
-- 
 ## About the API:
 - All auctions are updated every 2 minutes.
 - Auctions' limit per request is 200.
