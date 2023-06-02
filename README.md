@@ -1,3 +1,6 @@
+Update:
+This repo is unmaintained anymore, feel free to host the API on your own server if you still want to use it but the below links are not going to work.
+
 # HyskyAPI
 Unofficial Hypixel API created for handling Auctions API of Skyblock gamemode with ease and efficiency.
 
